@@ -27,7 +27,7 @@ jobs:
         id: action-code
         uses: im-open/did-custom-action-code-change@v1.0.1
         with:
-          files-with-code: 'action.yml,get-keyvault-secret-value.ps1'
+          files-with-code: 'action.yml,index.js'
           token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Get the next version for the readme if there are code changes to the action
