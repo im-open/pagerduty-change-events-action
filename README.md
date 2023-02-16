@@ -43,7 +43,7 @@ jobs:
     name: Sending PagerDuty Change Event
     steps:
       - name: Create a change event
-        uses: PagerDuty/pagerduty-change-events-action@master
+        uses: PagerDuty/pagerduty-change-events-action@v1
         with:
           integration-key: ${{ secrets.PAGERDUTY_CHANGE_INTEGRATION_KEY }}
 ```
@@ -78,7 +78,7 @@ jobs:
       - uses: martialonline/workflow-status@v3
         id: check
       - name: Create a change event
-        uses: PagerDuty/pagerduty-change-events-action@master
+        uses: PagerDuty/pagerduty-change-events-action@v1
         with:
           integration-key: ${{ secrets.PAGERDUTY_CHANGE_INTEGRATION_KEY }}
           custom-event: Deployment ${{ steps.check.outputs.status }}
