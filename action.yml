@@ -1,5 +1,5 @@
-name: 'PagerDuty Change Events'
-description: 'Create a PagerDuty Change Event'
+name: PagerDuty Change Events
+description: Create a PagerDuty Change Event
 
 inputs:
   integration-key:
