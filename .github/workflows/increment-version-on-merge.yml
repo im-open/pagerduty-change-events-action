@@ -45,14 +45,15 @@ jobs:
         uses: im-open/git-version-lite@v2
         id: version
         with:
-          create-ref: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           default-release-type: major
 
-      - name: Create Major Tag
+      - name: Create version tag, create or update major, minor, and latest tags
         uses: im-open/create-tags-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ steps.version.outputs.NEXT_VERSION_SHA }}
-          source-tag: ${{ steps.version.outputs.NEXT_VERSION }}
+          target-tag: ${{ steps.version.outputs.NEXT_VERSION }}
           include-major: true
+          include-major-minor: true
+          include-latest: true
