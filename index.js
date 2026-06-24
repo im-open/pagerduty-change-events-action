@@ -1,6 +1,6 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-const axios = require('axios')
+import * as core from '@actions/core';
+import * as github from '@actions/github';
+import * as axios from 'axios';
 
 async function sendChangeEvent(changeEvent) {
   try {
